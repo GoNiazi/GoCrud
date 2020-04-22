@@ -1,0 +1,10 @@
+{{template "header"}}
+<h1>NAME : {{ .Name}}</h1>
+<h2>PRICE : {{ .Price}}</h2>
+<h3>RESALE{{ .Resale}}</h3>
+<h4>ID : {{ .ID}}</h4>
+<br>
+
+<a href="/edit/{{ .ID}}" style="color: black">Go to EDIT page</a>
+
+{{template "footer"}}

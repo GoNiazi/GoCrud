@@ -1,0 +1,27 @@
+{{template "header"}}
+    <br>
+    <br>
+    <div class="container" style="background-color:#ccc;padding: 10px;">
+        <h1>Product Form</h1>
+    <form method="POST" action="/update">
+     
+      <div class="form-group">  
+        <input type="hidden" name ="productid" class="form-control" value="{{ .ID}}" >  
+      <label for="title">Name</label>
+          <input type="input" name="name" class="form-control" value="{{ .Name}}">
+          </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="input" name ="price" class="form-control" value="{{ .Price}}">
+        </div>
+        <div class="form-group">
+            <label for="price">ReSale</label>
+            <input type="input" name ="resale" class="form-control" value="{{ .Resale}}">
+          </div>
+      
+        
+        <input type="submit" class="btn btn-primary" value="Update Product">
+        
+      </form>
+    </div>
+    {{template "footer"}}

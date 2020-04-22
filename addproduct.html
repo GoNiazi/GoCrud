@@ -1,0 +1,27 @@
+{{template "header"}}
+    <br>
+    <br>
+    <div class="container" style="background-color:#ccc;padding: 10px;">
+        <h1>Product Form</h1>
+    <form method="POST" action="addproduct">
+      
+      <div class="form-group">    
+      <label for="title">Name</label>
+          <input type="input" name="name" class="form-control" id="title" aria-describedby="emailHelp">
+          </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="input" name ="price" class="form-control" id="price">
+        </div>
+        <div class="form-group">
+            <label for="price">ReSale</label>
+            <input type="input" name ="resale" class="form-control" id="price">
+          </div>
+      
+        
+        <input type="submit" class="btn btn-primary" value="Add Product">
+        
+      </form>
+    </div>
+
+    {{template "footer"}}

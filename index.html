@@ -1,0 +1,38 @@
+{{template "header" }}
+  
+  <h1><a href="/addproduct"> ADD NEW PRODUCT</a></h1>
+    <div class="container">
+    <table class="table table-dark">
+        <thead>
+
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Resale</th>
+            <th scope="col">View</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {{range .}}
+          <tr>
+           
+            <td>{{ .ID}}</td>
+            <td>{{ .Name}}</td>
+            <td>{{ .Price}}</td>
+            <td>{{ .Resale}}</td>
+           
+            <td><a href="/show/{{ .ID}}">View</a></td>
+            <td><a href="/edit/{{ .ID}}">Edit</a></td>
+          
+            <td><a href="/delete/{{ .ID}}">Delete</a><td>
+          </tr>
+          {{end}}
+        
+        </tbody>
+      </table>
+    </div>
+{{template "footer"}}
